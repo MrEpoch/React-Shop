@@ -1,32 +1,31 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Item from "./item";
+import uniqid from "uniqid"
 
 export default function Shop() {
+  const [items, setItems] = useState([]);
 
-    const [items, setItems] = useState([])
+  useEffect(() => {
+    fetchInfo();
+  }, []);
 
-    useEffect(() => {
-        const addItems = () => {
-            function Datas(name, imgPath) {
-                this.name = name;
-                this.imgPath = imgPath
-            }
-            const list = items;
-            while(items.length < 16) {
-                list.push(new Datas("apple", "./applepath"));
-                setItems(list)
-            }
-        }
-        addItems();
-        console.log(items)
-    }, [items])
+  async function fetchInfo() {
+    const get = await fetch("https://api.storerestapi.com/products?limit=10", {mode: "cors"})
+    const load = await get.json();
+    setItems(load.data);
+    console.log(load.data)
+  }
 
-    return (
-        <main>
-            {items.map((item) => {
-                return <Item props={item}/>
-            })}
-        </main>
-    )
+  return (
+    <main>
+      {
+        items.map((item) => (
+          <h3 key={uniqid()}>
+            {item.title}
+          </h3>
+        ))
+      }
+    </main>
+  );
 }

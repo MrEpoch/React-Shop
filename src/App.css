@@ -1,0 +1,9 @@
+main {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+main > h3 {
+    border: 2px solid black;
+}

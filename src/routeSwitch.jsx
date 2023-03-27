@@ -7,14 +7,13 @@ import Cart from "./components/cart";
 
 const RouteSwitch = () => {
     return (
-        <BrowserRouter>
+
             <Routes>
+                <Route path="about" element={<About />} />
+                <Route path="shop" element={<Shop />} />
+                <Route path="shop/shopping-card" element={<Cart />} />
                 <Route path="/" element={<App />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/shop" element={<Shop />} />
-                <Route path="/shop/shopping-card" element={<Cart />} />
             </Routes>
-        </BrowserRouter>
     )
 }
 
