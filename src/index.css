@@ -6,10 +6,10 @@
 
 :root {
   --light-gray-color: #DDDBDE;
-  --light-steel-color: #CAD4DF;
+  --light-steel-color: #aed6ff;
   --dark-gray-color: #656E77;
-  --dark-steel-color: #3b3b3b;
-  --beautiful-blue-color: #6696cf;
+  --dark-steel-color: #000000;
+  --beautiful-blue-color: #34a3ff;
 }
 
 
@@ -22,12 +22,12 @@ body {
 #root {
   width: 100%;
   height: 100%;
+  font-family: monospace;
 }
 
 nav {
   height: 50px;
   width: 100%;
-  font-family: monospace;
   align-items: center;
   font-size: 20px;
   background-color: var(--dark-steel-color);
@@ -45,4 +45,15 @@ a {
   width: 100%;
   height: 100%;
   background-color: var(--light-steel-color);
+  background-image: url("./components/background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 15% 85%;
+}
+
+.confident-text {
+  color: var(--light-steel-color);
+  grid-row: 2 / 3;
+  display: grid;
 }
