@@ -4,11 +4,13 @@ import App from "./App";
 import About from "./components/about";
 import Shop from "./components/shop";
 import Cart from "./components/cart";
+import Contact from "./components/contact"
 
 const RouteSwitch = () => {
     return (
 
             <Routes>
+                <Route path="contact" element={<Contact />} />
                 <Route path="about" element={<About />} />
                 <Route path="shop" element={<Shop />} />
                 <Route path="shop/shopping-card" element={<Cart />} />
