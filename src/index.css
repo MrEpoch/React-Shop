@@ -10,6 +10,7 @@
   --dark-gray-color: #656E77;
   --dark-steel-color: #000000;
   --beautiful-blue-color: #66fcf1;
+  --dark-beautiful-blue-color: #1aa49b;
 }
 
 
@@ -31,13 +32,20 @@ body {
 nav {
   font-size: 20px;
   background-color: var(--dark-steel-color);
-  color: var(--beautiful-blue-color);
+  color: var(--dark-beautiful-blue-color);
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   justify-items: center;
   column-gap: 50px;
   align-items: center;
   white-space: nowrap;
+}
+
+nav > a { transition: 0.7s; }
+
+nav > a:hover {
+  transition: 0.7s;
+  color: var(--beautiful-blue-color);
 }
 
 .main-link {
@@ -127,4 +135,8 @@ a {
   border-top-left-radius: 15px;
   right: 10%;
   bottom: 0;
+}
+
+.style-nav {
+  color: var(--beautiful-blue-color);
 }

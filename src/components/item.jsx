@@ -1,10 +1,11 @@
 
 
-export default function Item(props) {
+export default function Item( { props } ) {
     return (
         <>
-            <img src={props.props.path} />
-            <h2>{props.props.title}</h2>
+            <img src={props.path} />
+            <h2>{props.title}</h2>
+            <h1>{props.price}</h1>
         </>
     )
 }
