@@ -46,21 +46,58 @@ main > a > h1 {
 }
 
 .item-info {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   grid-area: 2 / 2 / 3 / 3;
 }
 
 .item-info > img {
-  width: 300px;
-  height: 300px;
+  width: 45%;
+  height: 70%;
+}
+
+.item-info > p {
+  width: 45%;
 }
 
 .btns-buy {
-  bottom: 10%;
-  left: 50%;
-  right: 50%;
+  justify-self: center;
+  align-self:center;
   height: 40px;
   display: flex;
   justify-content: space-around;
   width: 400px;
-  position: absolute;
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.btns-buy * {
+  cursor: pointer;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  font-family: monospace;
+  font-weight: 700;
+  width: 150px;
+  height: 50px;
+  border: 3px solid black;
+  background-color: var(--beautiful-blue-color);
+  transition: 0.6s ease;
+}
+
+.btns-buy > .add-to-cart {
+  border-bottom-right-radius: 0px!important;
+  border-top-left-radius: 0px!important;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.add-to-cart:hover {
+  transition: 0.6s ease;
+  transform: translateX(20px);
+}
+
+.add-and-pay:hover {
+  transition: 0.6s ease;
+  transform: translateX(-20px);
 }
