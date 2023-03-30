@@ -47,6 +47,7 @@ nav > a {
 
 nav > a:hover {
   transition: 0.7s;
+  transform: translateX(10px);
   color: var(--beautiful-blue-color);
 }
 
@@ -131,7 +132,7 @@ a {
 
 .toShop:hover {
   transition: 1.2s ease;
-  background-position: 100% 100%;
+  background-position: 300% 100%;
   transform: translateX(20px);
 }
 
