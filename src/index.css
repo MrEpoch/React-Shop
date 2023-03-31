@@ -47,11 +47,12 @@ nav > a {
 
 nav > a:hover {
   transition: 0.7s;
-  transform: translateX(10px);
+  transform: scale(1.1) translateX(10px);
   color: var(--beautiful-blue-color);
 }
 
 .main-link {
+  font-size: 25px;
   grid-column: 2 / 5;
 }
 
@@ -135,8 +136,6 @@ a {
   background-position: 300% 100%;
   transform: translateX(20px);
 }
-
-
 
 .pop {
   cursor: pointer;
